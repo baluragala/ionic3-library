@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ bookGroup.category | uppercase }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let book of bookGroup.books; let i = index">
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <div style="display: flex; flex-direction: row; flex: 1; align-items: center">
+        <img [src]="book.coverPage" style="width: 128px; height: 128px">
+        <div style="display: flex; flex-direction: column; flex: 2; margin-left: 10px">
+          <h3>{{ book.title }}</h3>
+          <h5 class="author">{{ book.author }}</h5>
+        </div>
+      </div>
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button
+          ion-button
+          clear
+          small
+          (click)="onAddToFavorites(book)"
+          *ngIf="!isFavorite(book)">Favorite
+        </button>
+        <button
+          ion-button
+          clear
+          small
+          color="danger"
+          (click)="onRemoveFromFavorites(book)"
+          *ngIf="isFavorite(book)">Unfavorite
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
