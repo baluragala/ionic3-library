@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -7,7 +6,7 @@
         <ion-icon name="menu"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>Books Library</ion-title>
+    <ion-title>Library</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,13 +15,9 @@
 <ion-content padding>
   <h3 text-center>Select your favorite Book</h3>
   <ion-list>
-    <button
-      ion-item
-      *ngFor="let bookGroup of bookCollection"
-      [navPush]="booksPage"
-      [navParams]="bookGroup">
+    <button ion-item *ngFor="let bookGroup of bookCollection" [navPush]="bookGroupPage" [navParams]="bookGroup">
       <ion-icon [name]="bookGroup.icon" item-left></ion-icon>
-      <h2>{{ bookGroup.category | uppercase }}</h2>
+      <h2 style="margin-top:4px">{{ bookGroup.category | uppercase }}</h2>
       <p>{{ bookGroup.books.length }} books</p>
     </button>
   </ion-list>

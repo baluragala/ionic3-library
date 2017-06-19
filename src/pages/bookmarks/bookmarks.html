@@ -1,0 +1,36 @@
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Bookmarks</ion-title>
+  </ion-navbar>
+
+</ion-header>-->
+
+<app-header [iconName]="'menu'" [navBarTitle]="'Bookmarks'"></app-header>
+
+<ion-content padding style="margin-top:44px">
+<ion-list>
+    <ion-item-sliding
+      *ngFor="let book of bookmarkedCollection">
+      <ion-item
+        (click)="onViewBook(book)">
+        <h2 style="padding-top:4px">{{ book.title }}</h2>
+        <p>{{ book.author }}</p>
+      </ion-item>
+      <ion-item-options>
+        <button
+          ion-button
+          color="danger"
+          (click)="onRemoveFromBookmarks(book)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

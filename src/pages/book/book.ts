@@ -21,11 +21,11 @@ export class BookPage {
   }
 
   ionViewDidLoad() {
-    this.author = 'Bala Krishna Ragala'; //this.navParams.get('author');
-    this.title = 'Learn Ionic'; //this.navParams.get('title');
+    this.author = this.navParams.data.author
+    this.title = this.navParams.data.title
   }
 
-  onClose(remove = false) {
+  close(remove = false) {
     this.viewCtrl.dismiss(remove);
   }
 

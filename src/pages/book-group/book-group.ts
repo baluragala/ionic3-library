@@ -1,27 +1,20 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams, AlertController} from 'ionic-angular';
-import {Book} from "../../interfaces/book.interface";
-import {BooksService} from "../../services/books";
-import {BookGroup} from "../../interfaces/book-group.interface";
-
-/**
- * Generated class for the BooksPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import {Book} from "../../models/book.interface";
+import {LibraryService} from "../../services/library.service";
+import {BookGroup} from "../../models/book-group.interface";
 
 @Component({
-  selector: 'page-books',
-  templateUrl: 'books.html',
+  selector: 'page-book-group',
+  templateUrl: 'book-group.html',
 })
-export class BooksPage {
+export class BookGroupPage {
 
   bookGroup: BookGroup;
 
   constructor(private navParams: NavParams,
               private alertCtrl: AlertController,
-              private booksService: BooksService) {
+              private libraryService: LibraryService) {
   }
 
   ngOnInit() {
@@ -30,14 +23,14 @@ export class BooksPage {
 
   onAddToFavorites(selectedBook: Book) {
     const alert = this.alertCtrl.create({
-      title: 'Add Book',
-      subTitle: 'Are you sure?',
-      message: 'Are you sure you want to add the book?',
+      title: 'Bookmark',
+      subTitle: selectedBook.title,
+      message: 'Are you sure?',
       buttons: [
         {
           text: 'Yes',
           handler: () => {
-            this.booksService.addBookToFavorites(selectedBook);
+            this.libraryService.addBookToBookmarks(selectedBook);
           }
         },
         {
@@ -54,11 +47,11 @@ export class BooksPage {
   }
 
   onRemoveFromFavorites(book: Book) {
-    this.booksService.removeBookFromFavorites(book);
+    this.libraryService.removeBookFromBookmarks(book);
   }
 
   isFavorite(book: Book) {
-    return this.booksService.isBookFavorite(book);
+    return this.libraryService.isBookBookmarked(book);
   }
 
 }

@@ -1,0 +1,16 @@
+import { NgModule } from '@angular/core';
+import { IonicModule } from 'ionic-angular';
+import { AppHeaderComponent } from './app-header';
+
+@NgModule({
+  declarations: [
+    AppHeaderComponent,
+  ],
+  imports: [
+    IonicModule,
+  ],
+  exports: [
+    AppHeaderComponent
+  ]
+})
+export class AppHeaderComponentModule {}

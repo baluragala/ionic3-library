@@ -1,4 +1,4 @@
-import {BookGroup} from "../interfaces/book-group.interface";
+import {BookGroup} from "../models/book-group.interface";
 
 export const BOOK_COLLECTION: BookGroup[] = [
   {
@@ -8,26 +8,28 @@ export const BOOK_COLLECTION: BookGroup[] = [
         id: 1,
         author: 'George Orwell',
         title: 'Nineteen Eighty-Four',
-        coverPage: 'http://t0.gstatic.com/images?q=tbn:ANd9GcRcuQJXseeMP8OiHrrTblnyrpkHWVwF1xyCo1hPTDFwgeS9WiLo'
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 2,
         author: 'Frank Herbert',
         title: 'Dune',
-        coverPage: 'https://images-na.ssl-images-amazon.com/images/I/41roF32BWCL._CR0,96,308,308_UX128.jpg'
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 3,
         author: 'Ray Bradbury',
-        title: 'Fahrenheit 451'
+        title: 'Fahrenheit 451',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 4,
         author: 'William Gibson',
-        title: 'Neuromancer'
+        title: 'Neuromancer',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
     ],
-    icon: 'brush'
+    icon: 'infinite'
   },
   {
     category: 'Romance Novles ',
@@ -35,25 +37,29 @@ export const BOOK_COLLECTION: BookGroup[] = [
       {
         id: 5,
         author: 'Jane Austen',
-        title: 'Pride and Prejudice'
+        title: 'Pride and Prejudice',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 6,
         author: 'Diana Gabaldon',
-        title: 'Outlander'
+        title: 'Outlander',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 7,
         author: 'Erich Segal',
-        title: 'Love Story'
+        title: 'Love Story',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 8,
         author: 'Charlotte Brontë',
-        title: 'Jane Eyre'
+        title: 'Jane Eyre',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
     ],
-    icon: 'brush'
+    icon: 'flame'
   },
   {
     category: 'Inspirational',
@@ -61,25 +67,29 @@ export const BOOK_COLLECTION: BookGroup[] = [
       {
         id: 9,
         author: 'Napoleon Hill',
-        title: 'Think and Grow Rich'
+        title: 'Think and Grow Rich',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 10,
         author: 'Norman Vincent Peale',
-        title: 'The Power of Positive Thinking'
+        title: 'The Power of Positive Thinking',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 11,
         author: 'Mitch Albom',
-        title: 'Tuesdays with Morrie'
+        title: 'Tuesdays with Morrie',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
       {
         id: 12,
         author: 'Sun Tzu',
-        title: 'The complete art of war'
+        title: 'The complete art of war',
+        coverPage: 'http://sellmybook.co.uk/wp-content/uploads/2016/06/book-stack-xxl.png'
       },
     ],
-    icon: 'brush'
+    icon: 'bonfire'
   },
 
 ];

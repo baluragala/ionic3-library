@@ -1,8 +1,7 @@
-
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ author }}</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,7 +10,15 @@
 <ion-content padding text-center>
   <ion-card>
     <ion-card-content>
-      {{ title }}
+      <h1>{{ title }}</h1>
+      <p>by</p>
+      <h3>{{ author }}</h3>
     </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button small outline color="danger" (click)="close(true)">Remove Bookmark</button>
+      </ion-col>
+    </ion-row>
   </ion-card>
+  <button ion-button color="danger" (click)="close()">Close</button>
 </ion-content>

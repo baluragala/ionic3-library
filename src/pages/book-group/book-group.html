@@ -12,11 +12,11 @@
     <ion-card-header>
     </ion-card-header>
     <ion-card-content>
-      <div style="display: flex; flex-direction: row; flex: 1; align-items: center">
-        <img [src]="book.coverPage" style="width: 128px; height: 128px">
-        <div style="display: flex; flex-direction: column; flex: 2; margin-left: 10px">
-          <h3>{{ book.title }}</h3>
-          <h5 class="author">{{ book.author }}</h5>
+      <div class="content">
+        <img [src]="book.coverPage" class="book-cover">
+        <div class="book-detail-container">
+          <h1 class="book-title">{{ book.title }}</h1>
+          <h4 class="author">{{ book.author }}</h4>
         </div>
       </div>
     </ion-card-content>
@@ -27,7 +27,7 @@
           clear
           small
           (click)="onAddToFavorites(book)"
-          *ngIf="!isFavorite(book)">Favorite
+          *ngIf="!isFavorite(book)">BookMark
         </button>
         <button
           ion-button
@@ -35,7 +35,7 @@
           small
           color="danger"
           (click)="onRemoveFromFavorites(book)"
-          *ngIf="isFavorite(book)">Unfavorite
+          *ngIf="isFavorite(book)">Remove BookMark
         </button>
       </ion-col>
     </ion-row>
